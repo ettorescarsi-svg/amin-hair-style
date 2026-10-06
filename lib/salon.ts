@@ -48,9 +48,9 @@ export const serviceCategories = [
 export const galleryImages = [
   {
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto%20capelli%20uomo-GZWSeCVWthvymX5XENRqakKjempAyP.webp',
-    alt: 'Taglio uomo con capelli scuri pettinati all’indietro nel salone',
+    alt: 'Taglio uomo con capelli scuri pettinati all\'indietro nel salone',
     label: 'Taglio uomo',
-    className: 'sm:col-span-2 sm:row-span-2',
+    className: '',
   },
   {
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto%20capelli%202-0y7WHNFqBLry9SuCF0Lzg6FMUu7nms.webp',
@@ -68,13 +68,13 @@ export const galleryImages = [
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/foto%20colore-lS7x8rViTX14cDIThbVB6awXLUg03a.webp',
     alt: 'Capelli lunghi lisci con colore prugna intenso',
     label: 'Colore',
-    className: 'sm:col-span-4',
+    className: '',
   },
   {
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cavei-8GzTQs7PgqRs3Il6aOfztHsxJTGWih.webp',
     alt: 'Capelli biondo freddo con onde morbide e luminose viste da dietro',
     label: 'Onde luminose',
-    className: 'sm:col-span-4',
+    className: '',
   },
 ]
 

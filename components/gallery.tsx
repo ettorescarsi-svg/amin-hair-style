@@ -17,22 +17,23 @@ export function Gallery() {
           </h2>
         </div>
 
-        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+        <ul className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 md:gap-4">
           {galleryImages.map((image, index) => {
             const isLastOddImage = galleryImages.length % 2 !== 0 && index === galleryImages.length - 1
 
             return (
               <li
                 key={image.src}
-                className={`group relative h-40 overflow-hidden rounded-xl bg-muted ${
-                  isLastOddImage ? 'col-span-2 h-56' : 'col-span-1'
-                } sm:h-[240px] ${image.className}`}
+                className={`group relative aspect-square overflow-hidden rounded-xl bg-muted ${
+                  isLastOddImage ? 'col-span-2 md:col-span-1 lg:col-span-1' : 'md:col-span-1 lg:col-span-1'
+                } ${image.className}`}
               >
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  fill
-                  sizes="(min-width: 1024px) 1152px, 100vw"
+                  width={600}
+                  height={600}
+                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div
