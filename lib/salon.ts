@@ -28,7 +28,7 @@ export const serviceCategories = [
     title: 'Uomo & Barba',
     description: 'Precisione, carattere e cura per il tuo look quotidiano.',
     items: [
-      { name: 'Taglio uomo', price: '20' },
+      { name: 'Taglio uomo', price: '67' },
       { name: 'Modellatura barba', price: '12' },
       { name: 'Taglio + barba', price: '28' },
       { name: 'Trattamento cuoio capelluto', price: '25' },
