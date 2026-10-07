@@ -78,6 +78,44 @@ export const galleryImages = [
   },
 ]
 
+export const reviews = [
+  {
+    name: 'Giulia M.',
+    initials: 'GM',
+    rating: 5,
+    text: 'Colore e piega perfetti, esattamente come lo immaginavo. Ambiente curato e personale attento a ogni dettaglio.',
+    meta: 'Colore & piega',
+  },
+  {
+    name: 'Marco T.',
+    initials: 'MT',
+    rating: 5,
+    text: 'Il miglior taglio che abbia mai avuto a Padova. Precisione sulla barba e tanta cortesia.',
+    meta: 'Taglio + barba',
+  },
+  {
+    name: 'Elena R.',
+    initials: 'ER',
+    rating: 4,
+    text: 'Trattamento alla cheratina eccellente, capelli morbidi e lucidi per settimane. Tornerò sicuramente.',
+    meta: 'Trattamento cheratina',
+  },
+  {
+    name: 'Davide L.',
+    initials: 'DL',
+    rating: 5,
+    text: 'Puntuali, professionali e molto gentili. Mi hanno consigliato lo stile giusto per il mio viso.',
+    meta: 'Taglio uomo',
+  },
+  {
+    name: 'Sara B.',
+    initials: 'SB',
+    rating: 5,
+    text: 'Balayage naturale e luminoso. Ho apprezzato molto la cura nella scelta dei prodotti.',
+    meta: 'Balayage',
+  },
+]
+
 export const weeklyHours = [
   { day: 'Lunedì', hours: '08:30 – 20:00' },
   { day: 'Martedì', hours: '08:30 – 20:00' },

@@ -20,20 +20,20 @@ export function OpeningHours() {
           <li
             key={row.day}
             className={`flex items-center justify-between py-3.5 text-sm ${
-              isToday ? 'text-foreground' : 'text-muted-foreground'
+              isToday ? 'font-medium text-foreground' : 'text-foreground/65'
             }`}
           >
             <span className="flex items-center gap-3">
               {row.day}
               {isToday && (
-                <span className="rounded-full bg-primary/15 px-2 py-0.5 text-[11px] font-medium uppercase tracking-wider text-primary">
+                <span className="rounded-full bg-accent/15 px-2 py-0.5 text-[11px] font-medium uppercase tracking-wider text-accent">
                   Oggi
                 </span>
               )}
             </span>
             <span
               className={`tabular-nums ${
-                isClosed ? 'text-muted-foreground' : isToday ? 'text-primary' : ''
+                isClosed ? 'italic text-foreground/50' : isToday ? 'text-accent' : ''
               }`}
             >
               {row.hours}
