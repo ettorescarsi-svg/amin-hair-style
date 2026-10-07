@@ -47,24 +47,24 @@
 
 :root {
   color-scheme: light;
-  --background: oklch(0.965 0.012 78);
-  --foreground: oklch(0.22 0.018 55);
-  --card: oklch(0.99 0.008 78);
-  --card-foreground: oklch(0.22 0.018 55);
-  --popover: oklch(0.99 0.008 78);
-  --popover-foreground: oklch(0.22 0.018 55);
-  --primary: oklch(0.55 0.075 70);
-  --primary-foreground: oklch(0.985 0.008 78);
-  --secondary: oklch(0.91 0.018 72);
-  --secondary-foreground: oklch(0.28 0.025 55);
-  --muted: oklch(0.935 0.012 78);
-  --muted-foreground: oklch(0.5 0.025 58);
-  --accent: oklch(0.88 0.035 72);
-  --accent-foreground: oklch(0.25 0.025 55);
+  --background: #fbf9f5;
+  --foreground: #2a2825;
+  --card: #ffffff;
+  --card-foreground: #2a2825;
+  --popover: #ffffff;
+  --popover-foreground: #2a2825;
+  --primary: #9e7b47;
+  --primary-foreground: #fbf9f5;
+  --secondary: #f1ece3;
+  --secondary-foreground: #2a2825;
+  --muted: #f3eee5;
+  --muted-foreground: #6b645b;
+  --accent: #9e7b47;
+  --accent-foreground: #fbf9f5;
   --destructive: oklch(0.577 0.18 28);
-  --border: oklch(0.86 0.022 72);
-  --input: oklch(0.86 0.022 72);
-  --ring: oklch(0.55 0.075 70);
+  --border: #e5ddcf;
+  --input: #e5ddcf;
+  --ring: #9e7b47;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -125,22 +125,18 @@
   }
 }
 
-html.dark {
-  --background: oklch(0.145 0.005 60);
-  --foreground: oklch(0.96 0.01 80);
-  --card: oklch(0.19 0.006 60);
-  --card-foreground: oklch(0.96 0.01 80);
-  --muted: oklch(0.23 0.006 60);
-  --muted-foreground: oklch(0.72 0.015 75);
-  --primary: oklch(0.78 0.1 80);
-  --primary-foreground: oklch(0.16 0.01 70);
-  --border: oklch(1 0 0 / 10%);
-  --ring: oklch(0.78 0.1 80);
-}
-
 @theme inline {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-serif: var(--font-cormorant), ui-serif, Georgia, serif;
+  --color-ink: #1a1918;
+  --color-gold: #c9a46a;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }
 
 html {
