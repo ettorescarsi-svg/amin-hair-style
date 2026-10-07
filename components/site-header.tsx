@@ -12,7 +12,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
         <a
           href="#top"
-          className="font-serif text-lg tracking-wide text-foreground"
+          className="font-serif text-lg tracking-wide text-accent"
         >
           {salon.name}
         </a>
