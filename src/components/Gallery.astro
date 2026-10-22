@@ -1,0 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import { photographs } from '../data/images';
+import Arrow from './Arrow.astro';
+const order = [4,0,3,1];
+---
+<section id="galleria" class="gallery wrap section-space" aria-labelledby="gallery-title">
+  <div class="section-heading"><div><p>La galleria</p><h2 id="gallery-title" class="display">Questione<br /><em>di carattere.</em></h2></div><p>Texture, sfumature, linee.<br />Uno sguardo ai capelli, da vicino.</p></div>
+  <div class="gallery-grid">{order.map((index,i) => <figure class={`gallery-item gallery-item-${i}`}><a href={photographs[index].src.src} class="gallery-open" data-gallery data-caption={photographs[index].label} aria-label={`Ingrandisci: ${photographs[index].label}`}><Image src={photographs[index].src} alt={photographs[index].alt} loading="lazy" width={photographs[index].src.width} quality={85} /><span class="image-open" aria-hidden="true"><Arrow /></span></a><figcaption><span>{photographs[index].label}</span><span aria-hidden="true">↗</span></figcaption></figure>)}</div>
+  <p class="gallery-end display">Diversi, <em>come te.</em></p>
+</section>
+<dialog class="lightbox" aria-label="Fotografia ingrandita"><button class="lightbox-close" type="button" aria-label="Chiudi fotografia">Chiudi <span aria-hidden="true">×</span></button><figure><img class="lightbox-image" alt="" width="389" height="510" /><figcaption class="lightbox-caption"></figcaption></figure><div class="lightbox-controls"><button type="button" data-gallery-prev aria-label="Fotografia precedente">←</button><span class="lightbox-position" aria-live="polite"></span><button type="button" data-gallery-next aria-label="Fotografia successiva">→</button></div></dialog>

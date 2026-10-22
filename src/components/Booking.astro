@@ -1,0 +1,5 @@
+---
+import { salon, serviceCategories } from '../../lib/salon';
+import Arrow from './Arrow.astro';
+---
+<section id="prenota" class="booking dark section-space" aria-labelledby="booking-title"><div class="wrap booking-grid"><div><p>Il prossimo appuntamento</p><h2 id="booking-title" class="display">Facciamo<br /><em>spazio a te.</em></h2></div><div class="booking-action"><p>Un nuovo taglio, il tuo colore, un momento per i tuoi capelli. Inizia con un messaggio.</p><label for="booking-service">Che cosa hai in mente?</label><select id="booking-service"><option value="">Vorrei un consiglio</option>{serviceCategories.map(category => <optgroup label={category.title}>{category.items.map(item => <option value={item.name}>{item.name}</option>)}</optgroup>)}</select><a id="booking-link" class="button button-light" href={salon.whatsappHref}>Scrivici su WhatsApp<Arrow /></a><p class="booking-note">Ti rispondiamo per concordare giorno e orario.<br />Preferisci chiamare? <a href={salon.phoneHref}>{salon.phoneDisplay}</a></p></div></div></section>

@@ -1,10 +1,21 @@
 export const salon = {
   name: 'Amin Hair Style',
+  brandMain: 'AMIN',
+  brandDescriptor: 'HAIR STYLE',
+  city: 'Padova',
+  street: 'Via Savona, 6',
+  postalCode: '35142',
+  region: 'PD',
+  country: 'IT',
+  timezone: 'Europe/Rome',
+  whatsappNumber: '393271918200',
+  phoneInternational: '+393271918200',
   rating: 4.5,
   reviews: 137,
   address: 'Via Savona, 6, 35142 Padova PD',
   phoneDisplay: '327 191 8200',
-  phoneHref: 'tel:3271918200',
+  phoneHref: 'tel:+393271918200',
+  googleReviewsHref: 'https://www.google.com/maps/search/?api=1&query=Amin+Hair+Style+Via+Savona+6+Padova',
   whatsappHref:
     'https://wa.me/393271918200?text=Ciao%2C%20vorrei%20prenotare%20un%20appuntamento%20da%20Amin%20Hair%20Style.',
   directionsHref:
@@ -12,6 +23,8 @@ export const salon = {
   mapEmbedSrc:
     'https://www.google.com/maps?q=Via+Savona+6,+35142+Padova+PD&output=embed',
 }
+
+export const bookingHref = (service = '') => `https://wa.me/${salon.whatsappNumber}?text=${encodeURIComponent(service ? `Ciao, vorrei prenotare ${service} da ${salon.name}. Quali disponibilità avete?` : `Ciao, vorrei prenotare un appuntamento da ${salon.name}.`)}`;
 
 export const serviceCategories = [
   {

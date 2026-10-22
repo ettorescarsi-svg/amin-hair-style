@@ -1,0 +1,9 @@
+---
+import { reviews, salon } from '../../lib/salon';
+import Arrow from './Arrow.astro';
+---
+<section id="recensioni" class="reviews section-space" aria-labelledby="reviews-title"><div class="wrap">
+  <div class="review-intro"><h2 id="reviews-title">Le vostre parole.</h2><a class="text-link" href={salon.googleReviewsHref}>Scopri le recensioni su Google <Arrow /></a></div>
+  <div class="review-track" tabindex="0" role="region" aria-label="Recensioni, scorri per leggere tutte le testimonianze">{reviews.map(review => <figure class="review"><blockquote class="display">“{review.text}”</blockquote><figcaption>{review.name}<span>{review.meta} · {review.rating}/5</span></figcaption></figure>)}</div>
+  <div class="review-controls"><p>Le esperienze raccontate dai clienti.</p><div><button type="button" data-review-prev aria-label="Recensione precedente">←</button><button type="button" data-review-next aria-label="Recensione successiva">→</button></div></div>
+</div></section>

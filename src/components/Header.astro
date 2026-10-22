@@ -1,0 +1,14 @@
+---
+import { salon } from '../../lib/salon';
+import Arrow from './Arrow.astro';
+const links = [['Il salone','#salone'],['Servizi','#servizi'],['Galleria','#galleria'],['Contatti','#dove-siamo']];
+---
+<header class="site-header wrap">
+  <a class="header-brand" href="#top" aria-label="Amin Hair Style, inizio pagina">AMIN <span>HAIR STYLE</span></a>
+  <nav class="desktop-nav" aria-label="Navigazione principale">{links.map(([label,href]) => <a href={href}>{label}</a>)}</nav>
+  <a class="header-book" href={salon.whatsappHref}>Prenota <Arrow /></a>
+  <details class="mobile-nav">
+    <summary aria-label="Menu di navigazione"><span class="menu-label">Menu</span><span class="menu-glyph" aria-hidden="true"></span></summary>
+    <nav aria-label="Navigazione mobile">{links.map(([label,href]) => <a href={href}>{label}<Arrow /></a>)}<a href="#recensioni">Recensioni<Arrow /></a><a href={salon.phoneHref}>Chiama {salon.phoneDisplay}</a></nav>
+  </details>
+</header>

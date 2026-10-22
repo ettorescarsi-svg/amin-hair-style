@@ -1,0 +1,9 @@
+---
+import { serviceCategories, bookingHref } from '../../lib/salon';
+import Arrow from './Arrow.astro';
+---
+<section id="servizi" class="services dark section-space" aria-labelledby="services-title"><div class="wrap">
+  <div class="section-heading"><div><p>Servizi & listino</p><h2 id="services-title" class="display">La forma<br /><em>che vuoi.</em></h2></div><p>Dal taglio al colore, dalla barba ai trattamenti.<br />Scegli da dove iniziare.</p></div>
+  <div class="service-list">{serviceCategories.map((category,index) => <details class="service-category" open={index === 0}><summary><span>{category.title}</span><span class="service-count">{category.items.length} servizi</span><span class="plus" aria-hidden="true">+</span></summary><div class="service-content"><p>{category.description}</p><ul>{category.items.map(item => <li><span>{item.name}</span><span class="price">€ {item.price}</span><a href={bookingHref(item.name)} aria-label={`Prenota ${item.name} su WhatsApp`}><span>Prenota</span><Arrow /></a></li>)}</ul></div></details>)}</div>
+  <p class="price-note">Prezzi indicativi: possono variare in base alla lunghezza dei capelli e al lavoro richiesto. Chiedici conferma prima di prenotare.</p>
+</div></section>

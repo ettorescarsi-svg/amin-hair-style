@@ -1,0 +1,17 @@
+---
+import Analytics from '@vercel/analytics/astro';
+import { salon, serviceCategories } from '../../lib/salon';
+import '../assets/fonts.css';
+import '../styles/global.css';
+const title = 'Amin Hair Style | Taglio, colore e styling a Padova';
+const description = 'Amin Hair Style a Padova, Via Savona 6. Taglio donna e uomo, colore, balayage e cura della barba. Scopri i servizi e prenota su WhatsApp.';
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const schema = {
+  '@context': 'https://schema.org', '@type': 'HairSalon', name: salon.name,
+  url: Astro.site?.href, telephone: salon.phoneInternational,
+  address: { '@type': 'PostalAddress', streetAddress: salon.street, addressLocality: salon.city, postalCode: salon.postalCode, addressRegion: salon.region, addressCountry: salon.country },
+  openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'], opens: '08:30', closes: '20:00' }],
+  hasOfferCatalog: { '@type': 'OfferCatalog', name: 'Servizi', itemListElement: serviceCategories.map(category => ({ '@type': 'OfferCatalog', name: category.title, itemListElement: category.items.map(item => ({ '@type': 'Service', name: item.name })) })) },
+};
+---
+<!doctype html><html lang="it"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="theme-color" content="#F5F2EB" /><title>{title}</title><meta name="description" content={description} /><link rel="canonical" href={canonical} /><link rel="icon" href="/favicon.svg" type="image/svg+xml" /><meta property="og:type" content="website" /><meta property="og:locale" content="it_IT" /><meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:url" content={canonical} /><meta property="og:image" content={new URL('/social.jpg',Astro.site)} /><meta property="og:image:alt" content="Amin Hair Style — Parrucchieri a Padova" /><meta name="twitter:card" content="summary_large_image" /><script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g,'\u003c')} /></head><body><a class="skip-link" href="#contenuto">Vai al contenuto</a><slot />{import.meta.env.PROD && <Analytics />}<script>import '../scripts/site';</script></body></html>

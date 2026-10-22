@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+import { photographs } from '../data/images';
+import { salon } from '../../lib/salon';
+import Arrow from './Arrow.astro';
+---
+<section class="hero wrap" aria-labelledby="hero-title">
+  <div class="hero-topline"><p>Parrucchieri a Padova</p><p>Donna, uomo. Il tuo stile.</p></div>
+  <h1 id="hero-title" class="hero-name">AMIN <span>HAIR STYLE</span></h1>
+  <div class="hero-composition">
+    <figure class="hero-photo hero-photo-main"><Image src={photographs[2].src} alt={photographs[2].alt} loading="eager" fetchpriority="high" widths={[287,574]} sizes="(max-width: 600px) 65vw, 40vw" quality={85} /><figcaption>Forma. Movimento. Carattere.</figcaption></figure>
+    <div class="hero-statement"><p class="display">Il tuo stile.<br /><em>Una nuova</em><br />prospettiva.</p><div><p>Taglio, colore e cura dei capelli.<br />Ti aspettiamo in Via Savona, a Padova.</p><a class="button button-light" href={salon.whatsappHref}>Prenota su WhatsApp<Arrow /></a><a class="text-link" href="#servizi">Esplora i servizi <span aria-hidden="true">↓</span></a></div></div>
+    <figure class="hero-photo hero-photo-detail"><Image src={photographs[3].src} alt={photographs[3].alt} loading="eager" widths={[287,389]} sizes="(max-width: 600px) 35vw, 25vw" quality={85} /><figcaption>Colore, senza compromessi di stile.</figcaption></figure>
+  </div>
+  <div class="hero-bottom"><p>Via Savona, 6 · Padova</p><a href="#dove-siamo">Lun–Sab / 08:30–20:00 <span aria-hidden="true">↘</span></a></div>
+</section>
